@@ -2,6 +2,18 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+```sh
+# start
+yarn create next-app --typescript
+# cd into the new project
+# add scss
+yarn add -D sass
+# add font awesome
+yarn add @fortawesome/fontawesome-svg-core @fortawesome/react-fontawesome @fortawesome/free-brands-svg-icons @fortawesome/free-solid-svg-icons
+# add animejs
+yarn add animejs @types/animejs
+```
+
 First, run the development server:
 
 ```bash
