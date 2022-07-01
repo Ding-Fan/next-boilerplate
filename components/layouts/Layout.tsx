@@ -1,6 +1,8 @@
+import { Flex } from "@chakra-ui/react"
 import { ReactNode } from "react"
 import Footer from "./Footer"
 import Header from "./Header"
+import MenuPanel from "./MenuPanel"
 
 interface Props {
     children: ReactNode
@@ -8,10 +10,13 @@ interface Props {
 
 export default function Layout({ children }: Props) {
     return (
-        <div className="bg-black text-white">
-            <Header fixed={true} />
-            <main className="relative top-0" >{children}</main>
-            <Footer />
-        </div>
+        <Flex h={"100vh"} overflow="hidden" >
+            {/* <Header fixed={true} /> */}
+            <MenuPanel />
+            <Flex flex="1" overflow={'scroll'} >
+                {children}
+            </Flex>
+            {/* <Footer /> */}
+        </Flex>
     )
 }
